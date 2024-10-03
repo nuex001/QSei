@@ -1,0 +1,212 @@
+.quizSec {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  color: var(--text);
+  padding: 3em 2em;
+  padding-top: 4em;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.quizSec .backbtn {
+  font-size: 4em;
+  color: var(--text);
+  cursor: pointer;
+  margin-bottom: 0.2em;
+}
+
+.quizSec ul {
+  width: 100%;
+  height: auto;
+}
+.quizSec ul li {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 2em;
+  color: var(--text);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  padding: 1em 1em;
+  gap: 1em;
+  border: 1px solid transparent;
+  background: var(--bg);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: relative;
+  cursor: pointer;
+  transition: background 500ms ease-in-out;
+}
+.quizSec ul li span {
+  color: var(--text);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.quizSec ul li .check {
+  font-size: 2.8em;
+  color: green;
+  opacity: 0;
+  margin-left: auto;
+}
+.quizSec ul li.checked {
+  color: var(--text);
+  background: var(--primary);
+}
+.quizSec ul li.checked .check {
+  opacity: 1;
+}
+.quizSec ul li.checked span {
+  color: var(--header);
+}
+.quizSec .btnCont .btn {
+  font-size: 1.8em;
+  font-weight: 800;
+  margin-top: 2em;
+  width: auto;
+  width: auto;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px !important;
+  gap: 0em 0.5em;
+  border: 1px solid transparent;
+  color: var(--header);
+  background: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform-origin: left;
+  transition: 500ms ease-in-out 4.5s;
+  margin: 1em auto;
+}
+
+.quizSec .alertPopup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0%;
+  left: 0%;
+  background: var(--bg);
+  z-index: 5;
+}
+
+/* msgalert */
+.quizSec .msgalert {
+  width: 300px;
+  height: 280px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 1.5em 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  position: relative;
+}
+.quizSec .msgalert .cancelBtn {
+  font-size: 2.8em;
+  position: absolute;
+  top:5%;
+  right: 5%;
+  color: crimson;
+}
+.quizSec .msgalert .iconstat {
+  font-size: 8em;
+  color: crimson;
+}
+.quizSec .msgalert .icongood {
+  font-size: 8em;
+  color: green;
+}
+
+.quizSec .msgalert h3 {
+  font-size: 3em;
+}
+
+.quizSec .msgalert h2 {
+  font-size: 3em;
+}
+.quizSec .msgalert p {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.quizSec .msgalert .btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.quizSec .msgalert .btns .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 1.4em;
+  padding: 0.7em 1em;
+  cursor: pointer;
+  color: var(--header);
+  background: var(--primary);
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+}
+
+.loader {
+  width: 78px;
+  height: 78px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes pulse {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+}

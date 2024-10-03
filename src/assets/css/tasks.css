@@ -1,0 +1,220 @@
+section.tasks {
+  width: 100%;
+  height: calc(100vh - 70px);
+  color: var(--text);
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--text);
+  padding-top: 2em;
+  overflow-y: scroll;
+  /* border: 5px solid var(--primary); */
+}
+section.tasks header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 1em;
+}
+section.tasks h1 {
+  font-size: 6em;
+  font-weight: 600;
+  margin: 0.1em auto;
+  margin-bottom: 0.3em;
+}
+section.tasks header p {
+  font-size: 1.4em;
+  padding: 0em 1em;
+}
+section.tasks main {
+  width: 100%;
+  height: auto;
+  padding: 0.2em 1em;
+}
+section.tasks main h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+section.tasks main ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-top: 1em;
+  padding-bottom: 5em;
+  margin-top: 2em;
+}
+
+section.tasks main ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6em;
+  padding: 0.7em 0.6em;
+  border-radius: 7px;
+  gap: 0.7em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+section.tasks main ul li h4 {
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+section.tasks main ul li .btn {
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 10px;
+  margin-left: 0.5em;
+}
+section.tasks main ul li .btn.check {
+  color: var(--text);
+  background: var(--primary);
+}
+
+/* LOADER  */
+section.tasks main ul li.skeleton {
+  background: hsla(227, 84%, 55%, 1);
+}
+section.tasks main ul li.skeleton .txtcount {
+  width: 7cm;
+  height: 30px;
+}
+section.tasks main ul li.skeleton .txtcount h4,
+section.tasks main ul li.skeleton .txtcount h5 {
+  width: 100%;
+  height: 14px;
+  display: block;
+  background: hsla(227, 84%, 55%, 1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.tasks main ul li.skeleton h4::after,
+section.tasks main ul li.skeleton .txtcount h5::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+  content: "";
+}
+
+section.tasks main ul li.skeleton .btn {
+  font-size: 0.8em;
+  padding: 0.7em 1.5em;
+  color: var(--bg);
+  border-radius: 10px;
+  margin-left: 0.5em;
+  position: relative;
+  background: hsla(227, 84%, 55%, 1);
+  /* background-color: #dddbdd; */
+  overflow: hidden;
+}
+section.tasks main ul li.skeleton .btn::before {
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  color: var(--bg);
+  border-radius: 10px;
+  margin-left: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+  content: "";
+}
+
+/* Skeleton animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+
+/*  */
+section.tasks .arrow-container {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    bottom: 0%;
+    animation: fadeOut 0.7s ease forwards 0.7s; /* Fade in the arrowhead after the line is drawn */
+  }
+  
+  section.tasks .arrow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15%;
+    left: 30%;
+    z-index: 4;
+  }
+  
+  section.tasks .arrow-line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 2s ease forwards;
+  }
+  
+  section.tasks .arrow-head {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.7s; /* Fade in the arrowhead after the line is drawn */
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes fadeOut {
+    to {
+      display: none;
+    }
+  }
+  
