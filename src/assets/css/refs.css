@@ -1,0 +1,137 @@
+section.refs {
+    width: 100%;
+    height: 100vh;
+    padding:1em 1em;
+    color: var(--text);
+    padding-top: 6em;
+  }
+  section.refs header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 1em;
+  }
+  section.refs header h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  section.refs header h2 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 1em;
+  }
+  section.refs header button {
+    width: 100%;
+    height: 50px;
+    font-size: 1.8em;
+    padding: 0.5em 1em;
+    color: var(--header);
+    background: var(--primary);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 0.5em;
+  }
+  section.refs h3 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--text);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0em 1em;
+    margin-top: 0.5em;
+  }
+  
+  section.refs ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    padding: 2em 1em;
+    padding-bottom: 6em;
+  }
+  section.refs ul li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  section.refs ul li .dp {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--header);
+    background: var(--primary);
+  }
+  section.refs ul li h2 {
+    width: calc(100% - 40px);
+    font-size: 1.4em;
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4em;
+    font-weight: 600;
+  }
+  
+
+/*  */
+section.refs .arrow-container {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    bottom: 0%;
+    animation: fadeOut 0.7s ease forwards 0.7s; /* Fade in the arrowhead after the line is drawn */
+  }
+  
+  section.refs .arrow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15%; 
+    left: 80%;
+    z-index: 4;
+  }
+  
+  section.refs .arrow-line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 2s ease forwards;
+  }
+  
+  section.refs .arrow-head {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 0.7s; /* Fade in the arrowhead after the line is drawn */
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes fadeOut {
+    to {
+      display: none;
+    }
+  }
+  

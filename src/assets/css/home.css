@@ -1,0 +1,148 @@
+.home {
+  width: 100%;
+  height: calc(100vh - 70px);
+  color: var(--text);
+  padding-top: 2em;
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid var(--text); */
+}
+.home header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  /* border: 2px solid var(--text); */
+}
+
+.home header .dp {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2.5em;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--text);
+}
+.home header h1 {
+  font-size: 2.5em;
+  /* color: var(--primary); */
+}
+.home header h2 {
+  font-size: 3em;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  /* color: var(--primary); */
+}
+.home main {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid var(--text); */
+}
+.home main .child {
+  width: 90%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 2em;
+  border-radius: 10px;
+  color: var(--header);
+  background: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.home main .child .cardCont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+.home main .child .cardCont h3 {
+  font-size: 2em;
+}
+.home main .child .cardsBtn {
+  display: flex;
+  font-size: 3em;
+  gap: 0.2em;
+}
+
+.home main .child .cardsBtn .icon {
+  font-size: 1.5em;
+  color: var(--header);
+}
+
+.home main .child .cardsBtn p {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.home main .child .playBtn {
+  padding: 0.6em 2em;
+  font-size: 1.6em;
+  color: var(--text);
+  background: var(--bg);
+  border-radius: 10px;
+  animation: glowAnimation 2s ease-in-out infinite; /* Add this line */
+}
+
+@keyframes glowAnimation {
+  0%,
+  100% {
+    box-shadow: 5px 5px 10px var(--primary), 1px -5px 20px var(--bg);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary);
+  }
+}
+
+.home .arrow-container {
+  width: 300px;
+  height: 205px;
+  position: relative;
+}
+
+.home .arrow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -6%;
+  left: -8%;
+  z-index: 3;
+}
+
+.home .arrow-line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw 2s ease forwards;
+}
+
+.home .arrow-head {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards 0.7s; /* Fade in the arrowhead after the line is drawn */
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
