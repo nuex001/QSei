@@ -8,11 +8,11 @@
 }
 
 :root {
-  --bg: linear-gradient(to top, #B42626, #000000);
-  --text: #fff;
-  --primary: #000000;
+  --bg: linear-gradient(to top, #6439FF, #6439FF);
+  --text: #000;
+  --primary: #000;
   --header: #fff;
-  --header2: #00ffff;
+  --header2: #6439FF;
 }
 
 .container {
