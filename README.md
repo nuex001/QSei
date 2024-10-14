@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # SEIGAME
 # SEIGAME
 # SEIGAME
+# SEIGAME
