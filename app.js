@@ -50,7 +50,7 @@ bot.start((ctx) => {
         inline_keyboard: [
           [
             {
-              text: "Open SeiSavvybot",
+              text: "Launch Aptos Academy",
               web_app: { url: referralLink },
             },
           ],
