@@ -50,7 +50,7 @@ bot.start((ctx) => {
         inline_keyboard: [
           [
             {
-              text: "Launch SeiSavvybot",
+              text: "Open SeiSavvybot",
               web_app: { url: referralLink },
             },
           ],
