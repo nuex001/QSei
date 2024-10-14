@@ -11,7 +11,7 @@ function Refs() {
   const copyBtnRef = useRef(null);
   const copyLink = (e) => {
     navigator.clipboard.writeText(
-      `https://t.me/SeiSavvybot?start=${sessionStorage.getItem("myId")}`
+      `https://t.me/Aptos_AcademyBot?start=${sessionStorage.getItem("myId")}`
     );
     e.target.innerHTML = "Copied";
     timer.current = setTimeout(() => {
