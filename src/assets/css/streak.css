@@ -18,13 +18,13 @@
   padding: 3em 1em;
 }
 .streak .streakCont h1 {
-  color: var(--text);
+  color: var(--header);
   font-size: 15em;
   text-align: center;
   text-transform: uppercase;
 }
 .streak .streakCont h2 {
-  color: var(--text);
+  color: var(--header);
   font-size: 2em;
   text-align: center;
 }
@@ -52,18 +52,18 @@
 }
 .streak .streakCont .passCont .box .icon {
   font-size: 6em;
-  color: var(--primary);
+  color: var(--header);
 }
 .streak .streakCont .passCont .box h4 {
   font-size: 4em;
-  color: var(--text);
+  color: var(--header);
 }
 .streak .streakCont .passCont .box h5 {
   font-size: 1.4em;
-  color: var(--text);
+  color: var(--header);
 }
 .streak .streakCont p {
-  color: var(--text);
+  color: var(--header);
   font-size: 1em;
   margin-top: auto;
 }

@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 # APTOS GAME
 # APTOS GAME
 # SEIGAME
+# SEIGAME
