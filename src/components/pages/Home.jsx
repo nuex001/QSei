@@ -11,9 +11,7 @@ function Home() {
   const [checkingTaskId, setCheckingTaskId] = useState(null);
 
   useEffect(() => {
-    if (!user) {
-      dispatch(getUser());
-    }
+    dispatch(getUser());
   }, []);
   return (
     <div className="home">
