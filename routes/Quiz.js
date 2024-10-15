@@ -70,7 +70,7 @@ router.put("/", auth, async (req, res) => {
         // Update the quizes field for the user to prevent further attempts today
         await User.findByIdAndUpdate(id, {
           quizes: currentDate,
-          $inc: { point: 1000, playPoints: -2 },
+          $inc: {playPoints: -2 },
         });
         return res.status(400).json({ err: "Oops, you failed😭" });
       }
