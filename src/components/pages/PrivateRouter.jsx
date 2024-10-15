@@ -52,7 +52,7 @@ const PrivateRoute = () => {
           setIsLoading(false);
         }
       } else {
-        // console.error("Us er data is not available");
+        setSameDay(true);
         setIsLoading(false);
       }
     } catch (error) {
@@ -68,7 +68,7 @@ const PrivateRoute = () => {
     if (!storedToken) {
       fetchUserData();
     } else {
-     setAuthToken(storedToken);
+      setAuthToken(storedToken);
       setIsLoading(false);
     }
   }, [navigate]);
