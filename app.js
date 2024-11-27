@@ -34,7 +34,7 @@ mongoose
   });
 
 const web_link = "https://seisavvy.netlify.app/";
-const bot_link = "https://t.me/Aptos_AcademyBot";
+const bot_link = "https://t.me/soon_academy_bot";
 
 
 bot.start((ctx) => {
@@ -44,13 +44,13 @@ bot.start((ctx) => {
   const username = ctx.from.username ? `@${ctx.from.username}` : "there";
   // Send the initial message with inline keyboard
   ctx.reply(
-    `Hey ${username}! It's Aptos Academy! 🌟 Your go-to app for getting onboarded on Aptos, right in your pocket!📱\n\We're rolling out our Telegram mini app! Start farming points now, and who knows what cool stuff you'll snag with them soon! 🚀\n\nGot friends? Bring 'em in! The more, the merrier! 🌱\n\nRemember: SeiSavvy is where growth thrives and endless opportunities await!!!`,
+    `Hey ${username}! It's SOON Academy! 🌟 Your go-to app for getting onboarded on Soon, right in your pocket!📱\n\We're rolling out our Telegram mini app! Start farming points now, and who knows what cool stuff you'll snag with them soon! 🚀\n\nGot friends? Bring 'em in! The more, the merrier! 🌱\n\nRemember: SOON Academy is where growth thrives and endless opportunities await!!!`,
     {
       reply_markup: {
         inline_keyboard: [
           [
             {
-              text: "Launch Aptos Academy",
+              text: "Launch SOON Academy",
               web_app: { url: referralLink },
             },
           ],
